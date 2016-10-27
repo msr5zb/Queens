@@ -29,7 +29,27 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        //Test Case 1
+//        StateSpace startingStateSpace = new StateSpace(5,5);
+//        startingStateSpace.board[4][0].setTileMark("0");
+//        startingStateSpace.board[4][0].available = false;
+//        startingStateSpace.board[3][2].setTileMark("1");
+//        startingStateSpace.board[3][2].available = false;
+//        startingStateSpace.findInitialZero();
+         
+        //Test Case 2
+        StateSpace startingStateSpace = new StateSpace(6,6);
+        startingStateSpace.board[5][1].setTileMark("0");
+        startingStateSpace.board[5][1].available = false;
+        startingStateSpace.board[4][3].setTileMark("2");
+        startingStateSpace.board[4][3].available = false;
+        startingStateSpace.findInitialZero();
+                    
+        
+        
+        Search start = new Search();
+        start.runAlgorithm(startingStateSpace);
+        
     }    
     
 }

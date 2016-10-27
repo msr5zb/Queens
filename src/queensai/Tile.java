@@ -15,6 +15,7 @@ public class Tile {
     int row;
     int column;
     String tileMark;
+    boolean available = true;
     //Note, A Tile Mark can be a "empty" "queen" "numberMine"
     
     public Tile(){}
