@@ -413,6 +413,18 @@ public class StateSpace {
                 return false;
             }
         }  
+        
+        for(int i = 0; i < this.rows; i++){
+            for(int j = 0; j < this.columns; j++){
+                if(!this.board[i][j].tileMark.equals("shaded") && !this.board[i][j].tileMark.equals("empty")){
+                    if(!this.isMineSatisfied(i, j)){
+                        return false;
+                    }
+                }
+            }
+            
+        }        
+        
         System.out.println("BOARD WAS COMPLETED!");
         return true;
     }
